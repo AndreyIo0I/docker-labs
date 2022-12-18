@@ -1,7 +1,7 @@
 highscore = 0;
 
 function parseHighScores(){
-	$("#highscores").load("data.txt", function(responseText, statusText, xhr){
+	$("#highscores").load("data/data.txt", function(responseText, statusText, xhr){
 		highscore = responseText;
 		$("#highscore").html(highscore);
 	});

@@ -6,7 +6,7 @@ http.createServer(function (request, response) {
    var hscore = 0;
    request.on('data', function (chunk) {
         hscore = JSON.parse(chunk).hs.toString();
-        fs.writeFile('data.txt', hscore, function(err){
+        fs.writeFile('data/data.txt', hscore, function(err){
          if(err)
             return;
         });
@@ -27,4 +27,4 @@ http.createServer(function (request, response) {
    }); 
 }).listen(8080);
 
-console.log('Server running at localhost:8080/');
+console.log('Server running at http://localhost:8080/');

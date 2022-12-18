@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: 2048game
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/data.txt:/code/data/data.txt
